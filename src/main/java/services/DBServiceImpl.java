@@ -7,8 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class DBServiceImpl implements DBService {
-    private List<TaxType> taxTypeList = new LinkedList<>();
-    private List<Tax> taxList = new LinkedList<>();
+    private final List<TaxType> taxTypeList = new LinkedList<>();
+    private final List<Tax> taxList = new LinkedList<>();
 
     public DBServiceImpl() {
         fillTaxType();
