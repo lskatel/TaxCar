@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Штрафы ГИБДД.Администратор</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Административный раздел</h1>
+<h2>Списк видов нарушений</h2>
+<div>
+    <table border="1" width="800px">
+        <tr>
+            <th>Вид нарушения</th>
+            <th>Сумма штрафа</th>
+        </tr>
+        {{#allTaxTypes}}
+            <tr>
+                <td>{{name}}</td>
+                <td>{{summ}}</td>
+            </tr>
+        {{/allTaxTypes}}
+    </table>
+</div>
+<h2>Список должников</h2>
+<div>
+    <table border="1" width="800px">
+        <tr>
+            <th>Госномер</th>
+            <th>Марка</th>
+            <th>Модель</th>
+            <th>Владелец</th>
+            <th>Вид нарушения</th>
+            <th>Сумма штрафа</th>
+        </tr>
+        {{#allTaxes}}
+            <tr>
+                <td>{{gosnumber}}</td>
+                <td>{{mark}}</td>
+                <td>{{model}}</td>
+                <td>{{fio}}</td>
+                <td>{{taxName}}</td>
+                <td>{{taxSumm}}</td>
+            </tr>
+        {{/allTaxes}}
+    </table>
+</div>
+</body>
+</html>

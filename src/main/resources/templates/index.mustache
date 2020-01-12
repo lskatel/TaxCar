@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Штрафы ГИБДД</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <h1>Штрафы ГИБДД</h1>
+        <h2>Самые частые нарушения</h2>
+        <p>Чаще всего водители нарушают именно эти правила дорожного движения:</p>
+        <div>
+            <table border="1" width="800px">
+                <tr>
+                    <th>Вид нарушения</th>
+                    <th>Сумма штрафа</th>
+                </tr>
+            {{#topTaxes}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{summ}}</td>
+                </tr>
+            {{/topTaxes}}
+            </table>
+        </div>
+        <h2>Поиск штрафов</h2>
+        <p>Для поиска штрафов воспользуйтесь формой предстваленной ниже:</p>
+        <form method="post">
+            ФИО: <input type="text" name="fio"/>
+            Госномер: <input type="text" name="gosnumber"/>
+            <input type="submit"/>
+        </form>
+        <div>
+            <table border="1" width="800px">
+                <tr>
+                    <th>Госномер</th>
+                    <th>Марка</th>
+                    <th>Модель</th>
+                    <th>Владелец</th>
+                    <th>Вид нарушения</th>
+                    <th>Сумма штрафа</th>
+                </tr>
+            {{#taxes}}
+                <tr>
+                    <td>{{gosnumber}}</td>
+                    <td>{{mark}}</td>
+                    <td>{{model}}</td>
+                    <td>{{fio}}</td>
+                    <td>{{taxName}}</td>
+                    <td>{{taxSumm}}</td>
+                </tr>
+            {{/taxes}}
+            </table>
+        </div>
+    </body>
+</html>
